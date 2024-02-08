@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Studio Practicals</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #4285f4;
+        }
+
+        h2 {
+            color: #4285f4;
+        }
+
+        .code-container {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow-x: auto;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        #java-code {
+            background-color: #f8f8f8;
+        }
+
+        #xml-code {
+            background-color: #f0f0f0;
+        }
+
+        #output-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #output-image {
+            width: 40%;
+            max-width: 1920px;
+            /* Set the width for a 1080p display */
+            max-height: 1080px;
+            /* Set the height for a 1080p display */
+            margin: 0 auto;
+            /* Center the container */
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: none;
+        }
+
+        #output-image img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Android Studio Practicals</h1>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 1: HelloWorld Display</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.myapp1;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}  
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"&gt;
+
+    &lt;EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text"/&gt;
+
+    &lt;Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:onClick="onSubmitClick"/&gt;
+&lt;/RelativeLayout&gt;
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204856971652636672/p1-output_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6417f&is=65c3cc7f&hm=e95e9b6c5391b0aacad57418b1506bb4e98b03c2175d1e76cb3c3c14f67329e1&"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 2: MyInfo App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.myapp2;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+    }
+}
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myInfoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#808080"&gt;
+
+    &lt;TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: Varma Manish H"
+        android:textColor="#0000FF"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/qualificationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qualification: UG"
+        android:textColor="#00FF00"
+        android:textSize="18sp"
+        android:layout_below="@id/nameTextView"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/contactTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Number: 9664938050"
+        android:textColor="#FFA500"
+        android:textSize="18sp"
+        android:layout_below="@id/qualificationTextView"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email ID: 210510104023@paruluniversity.ac.in"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:layout_below="@id/contactTextView"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: 816, near gas godaun street, somatalav, dabhoi road, vadodara."
+        android:textColor="#800080"
+        android:textSize="18sp"
+        android:layout_below="@id/emailTextView"
+        android:layout_marginTop="20dp"/&gt;
+&lt;/RelativeLayout&gt;
+
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204866292675252224/p2_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d64a2d&is=65c3d52d&hm=1d85611a6cfe7968abef5f3070c6dfeb0e3af84e78a0ab598a43388b4193ee48&" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 3: Android Activity Lifecycle</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+                package com.example.mp3;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class MainActivity extends Activity {
+
+    private static final String tag = "ActivityLifeCycle";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Log.d(tag, "onCreate: Activity created");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(tag, "onStart: Activity started");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(tag, "onResume: Activity resumed");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(tag, "onPause: Activity paused");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(tag, "onStop: Activity stopped");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(tag, "onDestroy: Activity destroyed");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(tag, "onRestart: Activity restarted");
+    }
+}
+
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+Don't needed
+</code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="path/to/your/output-image-1.jpg" alt="Don't needed">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 4: Text Entry and Toast App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp4;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void onSubmitClick(View view) {
+        EditText editText = findViewById(R.id.editText);
+        String enteredText = editText.getText().toString();
+
+        Toast.makeText(this,enteredText, Toast.LENGTH_LONG).show();
+    }
+}
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"&gt;
+           
+    &lt;EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text"/&gt;
+           
+    &lt;Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:onClick="onSubmitClick"/&gt;
+    &lt;/RelativeLayout&gt;
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204863148948197446/Screenshot_2024-02-08-00-08-28-57_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6473f&is=65c3d23f&hm=6d4f887093fb57a136fc4fc92496aeb1101918db833c55f21430c9e16e029221&"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 5: Arithmetic Operations App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+                package com.example.mp5;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText input1, input2;
+    private TextView output;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        input1 = findViewById(R.id.input1);
+        input2 = findViewById(R.id.input2);
+        output = findViewById(R.id.output);
+
+        Button addButton = findViewById(R.id.addButton);
+        Button subtractButton = findViewById(R.id.subtractButton);
+        Button multiplyButton = findViewById(R.id.multiplyButton);
+        Button divideButton = findViewById(R.id.divideButton);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("+");
+            }
+        });
+
+        subtractButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("-");
+            }
+        });
+
+        multiplyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("*");
+            }
+        });
+
+        divideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("/");
+            }
+        });
+    }
+
+    private void performOperation(String operator) {
+        try {
+            double num1 = Double.parseDouble(input1.getText().toString());
+            double num2 = Double.parseDouble(input2.getText().toString());
+            double result = 0;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+            }
+
+            output.setText("Result: " + result);
+        } catch (NumberFormatException | ArithmeticException e) {
+            output.setText("Error: Invalid input");
+        }
+    }
+}
+
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"&gt;
+
+    &lt;EditText
+        android:id="@+id/input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first number"
+        android:inputType="numberDecimal" /&gt;
+
+    &lt;EditText
+        android:id="@+id/input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter second number"
+        android:inputType="numberDecimal" /&gt;
+
+    &lt;Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add" /&gt;
+
+    &lt;Button
+        android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract" /&gt;
+
+    &lt;Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiply" /&gt;
+
+    &lt;Button
+        android:id="@+id/divideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divide" /&gt;
+
+    &lt;TextView
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" /&gt;
+
+&lt;/LinearLayout&gt;
+</code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204979846262947851/pf_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6b3ee&is=65c43eee&hm=0378a099e164cc5ac5eef760989aa6a8b249359dc013b2d76e9c600af9d67002&" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 6: AutoCompleteText Demo</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp6;
+
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Sample data for AutoCompleteTextView
+        String[] countries = {
+                "United States", "China", "Japan", "Germany", "India", "United Kingdom",
+                "France", "Brazil", "Italy", "Canada", "South Korea", "Australia", "Russia",
+                "Spain", "Mexico", "Indonesia", "Turkey", "Netherlands", "Saudi Arabia",
+                "Switzerland", "Argentina", "Sweden", "Poland", "Belgium", "Iran", "Norway",
+                "Austria", "United Arab Emirates", "South Africa", "Israel", "Thailand",
+                "Nigeria", "Ireland", "Singapore", "Hong Kong", "Malaysia", "Denmark",
+                "Philippines", "Colombia", "Chile", "Finland", "Egypt", "Pakistan",
+                "Greece", "Portugal", "Czech Republic", "Romania", "Peru", "New Zealand"};
+
+        ;
+
+        // Create an ArrayAdapter with the sample data
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, countries);
+
+        // Get the AutoCompleteTextView reference from the layout
+        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+
+        // Set the adapter for AutoCompleteTextView
+        autoCompleteTextView.setAdapter(adapter);
+    }
+}
+
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"&gt;
+
+        &lt;input
+            type="text"
+            id="autoCompleteTextView"
+            name="autoCompleteTextView"
+            style="width: 100%; height: 30px; margin-top: 20px;"
+            placeholder="Enter a country"
+            list="countryList" /&gt;
+
+        &lt;datalist id="countryList"&gt;
+            &lt;option value="Country 1"&gt;
+            &lt;option value="Country 2"&gt;
+            &lt;option value="Country 3"&gt;
+            &lt;!-- Add more countries as needed --&gt;
+        &lt;/datalist&gt;
+
+    &lt;/RelativeLayout&gt;
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204992993476743199/screenshot_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6c02d&is=65c44b2d&hm=08a6d003ff1e7899b2598c7d7d109c2e39b4d095689ccda6d2c4ab72ca2fe3ef&" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 7: Login Module Application</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here
+package com.example.mp7;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        final EditText usernameEditText = findViewById(R.id.usernameEditText);
+        final EditText passwordEditText = findViewById(R.id.passwordEditText);
+        Button loginButton = findViewById(R.id.loginButton);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = usernameEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
+
+                // Display a Toast with the entered username and password
+                Toast.makeText(MainActivity.this, "Username: " + username + "\nPassword: " + password, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}
+
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;input
+        type="text"
+        id="usernameEditText"
+        name="usernameEditText"
+        style="width: 100%; height: 30px;"
+        placeholder="Username" /&gt;
+
+    &lt;input
+        type="password"
+        id="passwordEditText"
+        name="passwordEditText"
+        style="width: 100%; height: 30px; margin-top: 10px;"
+        placeholder="Password" /&gt;
+
+    &lt;button
+        id="loginButton"
+        name="loginButton"
+        style="width: auto; height: auto; margin-top: 10px;"
+        onclick="onLoginButtonClick()"
+    &gt;Login&lt;/button&gt;
+
+&lt;/RelativeLayout&gt;
+</code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204988616242364446/p7_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6bc19&is=65c44719&hm=b695d9d0757439bd081ad78ed9067e38f67141adc332784d8e697abe6d70920c&" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Repeat the above structure for the remaining practicals (2 to 7) -->
+
+    <script>
+        // You can add any JavaScript code here if needed
+    </script>
+</body>
+
+</html>
