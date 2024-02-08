@@ -597,29 +597,21 @@ public class MainActivity extends AppCompatActivity {
             <!-- Replace the following with your XML code -->
             <pre><code>
 &lt;!-- Your XML code here --&gt;
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"&gt;
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter a country" />
 
-        &lt;input
-            type="text"
-            id="autoCompleteTextView"
-            name="autoCompleteTextView"
-            style="width: 100%; height: 30px; margin-top: 20px;"
-            placeholder="Enter a country"
-            list="countryList" /&gt;
-
-        &lt;datalist id="countryList"&gt;
-            &lt;option value="Country 1"&gt;
-            &lt;option value="Country 2"&gt;
-            &lt;option value="Country 3"&gt;
-            &lt;!-- Add more countries as needed --&gt;
-        &lt;/datalist&gt;
-
-    &lt;/RelativeLayout&gt;
+&lt;/RelativeLayout>
             </code></pre>
         </div>
         <div id="output-container">
@@ -680,35 +672,34 @@ public class MainActivity extends AppCompatActivity {
             <!-- Replace the following with your XML code -->
             <pre><code>
 &lt;!-- Your XML code here --&gt;
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
 &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"&gt;
+    tools:context=".MainActivity">
 
-    &lt;input
-        type="text"
-        id="usernameEditText"
-        name="usernameEditText"
-        style="width: 100%; height: 30px;"
-        placeholder="Username" /&gt;
+    &lt;EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username" />
 
-    &lt;input
-        type="password"
-        id="passwordEditText"
-        name="passwordEditText"
-        style="width: 100%; height: 30px; margin-top: 10px;"
-        placeholder="Password" /&gt;
+    &lt;EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:hint="Password" />
 
-    &lt;button
-        id="loginButton"
-        name="loginButton"
-        style="width: auto; height: auto; margin-top: 10px;"
-        onclick="onLoginButtonClick()"
-    &gt;Login&lt;/button&gt;
+    &lt;Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:text="Login" />
 
-&lt;/RelativeLayout&gt;
+&lt;/RelativeLayout>
 </code></pre>
         </div>
         <div id="output-container">
