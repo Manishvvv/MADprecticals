@@ -133,8 +133,10 @@ public class MainActivity extends AppCompatActivity {
         <h2>Practical 2: MyInfo App</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
+            <h4>Color's without Java code</h4>
             <!-- Replace the following with your Java code -->
-            <pre><code>// Your Java code here
+            <pre><code>
+// Your Java code here  
 package com.example.myapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -148,6 +150,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+    }
+}
+            </code></pre>
+            <h4>Color's With Java code</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.myapp2;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        RelativeLayout myInfoLayout = findViewById(R.id.myInfoLayout);
+        TextView nameTextView = findViewById(R.id.nameTextView);
+        TextView qualificationTextView = findViewById(R.id.qualificationTextView);
+        TextView contactTextView = findViewById(R.id.contactTextView);
+        TextView emailTextView = findViewById(R.id.emailTextView);
+        TextView addressTextView = findViewById(R.id.addressTextView);
+
+        myInfoLayout.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+        nameTextView.setTextColor(getResources().getColor(android.R.color.holo_blue_dark));
+        qualificationTextView.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+        contactTextView.setTextColor(getResources().getColor(android.R.color.holo_orange_dark));
+        emailTextView.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+        addressTextView.setTextColor(getResources().getColor(android.R.color.holo_purple));
 
     }
 }
@@ -221,7 +257,8 @@ public class MainActivity extends AppCompatActivity {
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204866292675252224/p2_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d64a2d&is=65c3d52d&hm=1d85611a6cfe7968abef5f3070c6dfeb0e3af84e78a0ab598a43388b4193ee48&" alt="Output Image">
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204866292675252224/p2_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d64a2d&is=65c3d52d&hm=1d85611a6cfe7968abef5f3070c6dfeb0e3af84e78a0ab598a43388b4193ee48&"
+                    alt="Output Image">
             </div>
         </div>
     </div>
@@ -233,61 +270,60 @@ public class MainActivity extends AppCompatActivity {
             <h3>Java Code</h3>
             <!-- Replace the following with your Java code -->
             <pre><code>// Your Java code here
-                package com.example.mp3;
+package com.example.mp3;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
-    private static final String tag = "ActivityLifeCycle";
+    private static final String TAG = "ActivityLifeCycle";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d(tag, "onCreate: Activity created");
+        Log.d(TAG, "onCreate: Activity created");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(tag, "onStart: Activity started");
+        Log.d(TAG, "onStart: Activity started");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(tag, "onResume: Activity resumed");
+        Log.d(TAG, "onResume: Activity resumed");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(tag, "onPause: Activity paused");
+        Log.d(TAG, "onPause: Activity paused");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(tag, "onStop: Activity stopped");
+        Log.d(TAG, "onStop: Activity stopped");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(tag, "onDestroy: Activity destroyed");
+        Log.d(TAG, "onDestroy: Activity destroyed");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(tag, "onRestart: Activity restarted");
+        Log.d(TAG, "onRestart: Activity restarted");
     }
 }
-
             </code></pre>
         </div>
         <div class="code-container" id="xml-code">
@@ -302,7 +338,8 @@ Don't needed
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205203400107630673/p3.0110_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d78422&is=65c50f22&hm=67b0716cbddde6991d7e513f5e0af719032e222f6e2f3cee2055dbc0128244a3&" alt="Don't needed">
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205203400107630673/p3.0110_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d78422&is=65c50f22&hm=67b0716cbddde6991d7e513f5e0af719032e222f6e2f3cee2055dbc0128244a3&"
+                    alt="Don't needed">
             </div>
         </div>
     </div>
@@ -539,7 +576,8 @@ public class MainActivity extends AppCompatActivity {
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204979846262947851/pf_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6b3ee&is=65c43eee&hm=0378a099e164cc5ac5eef760989aa6a8b249359dc013b2d76e9c600af9d67002&" alt="Output Image">
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204979846262947851/pf_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6b3ee&is=65c43eee&hm=0378a099e164cc5ac5eef760989aa6a8b249359dc013b2d76e9c600af9d67002&"
+                    alt="Output Image">
             </div>
         </div>
     </div>
@@ -618,7 +656,8 @@ public class MainActivity extends AppCompatActivity {
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204992993476743199/screenshot_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6c02d&is=65c44b2d&hm=08a6d003ff1e7899b2598c7d7d109c2e39b4d095689ccda6d2c4ab72ca2fe3ef&" alt="Output Image">
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204992993476743199/screenshot_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6c02d&is=65c44b2d&hm=08a6d003ff1e7899b2598c7d7d109c2e39b4d095689ccda6d2c4ab72ca2fe3ef&"
+                    alt="Output Image">
             </div>
         </div>
     </div>
@@ -628,11 +667,14 @@ public class MainActivity extends AppCompatActivity {
         <h2>Practical 7: Login Module Application</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
+            <h4>MainActivity.java</h4>
             <!-- Replace the following with your Java code -->
             <pre><code>
-// Your Java code here
+// Your Java code here  
 package com.example.mp7;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -643,32 +685,75 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText usernameEditText, passwordEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText usernameEditText = findViewById(R.id.usernameEditText);
-        final EditText passwordEditText = findViewById(R.id.passwordEditText);
-        Button loginButton = findViewById(R.id.loginButton);
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
 
+        Button loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = usernameEditText.getText().toString();
-                String password = passwordEditText.getText().toString();
-
-                // Display a Toast with the entered username and password
-                Toast.makeText(MainActivity.this, "Username: " + username + "\nPassword: " + password, Toast.LENGTH_SHORT).show();
+                loginUser();
             }
         });
+    }
+
+    private void loginUser() {
+        String username = usernameEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
+        
+        if (username.equals("sampleuser") && password.equals("password123")) {
+            Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, NextActivity.class);
+            intent.putExtra("USERNAME", username);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Login failed. Check username and password.", Toast.LENGTH_SHORT).show();
+        }
     }
 }
 
             </code></pre>
+
+            <h4>NextActivity.java</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.mp7;
+
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class NextActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_next);
+
+        TextView usernameTextView = findViewById(R.id.usernameTextView);
+
+        // Get username from the intent
+        String username = getIntent().getStringExtra("USERNAME");
+
+        // Display username in TextView
+        usernameTextView.setText("Welcome, " + username + "!");
+    }
+}
+            </code></pre>
         </div>
         <div class="code-container" id="xml-code">
             <h3>XML Code</h3>
+            <h4>activity_main.xml</h4>
             <!-- Replace the following with your XML code -->
             <pre><code>
 &lt;!-- Your XML code here --&gt;
@@ -683,30 +768,355 @@ public class MainActivity extends AppCompatActivity {
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:hint="Username"/>
 
     &lt;EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/usernameEditText"
-        android:hint="Password" />
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
 
     &lt;Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordEditText"
-        android:text="Login" />
+        android:layout_marginTop="16dp"
+        android:text="Login"/>
+
+&lt;/RelativeLayout>
+</code></pre>
+
+            <h4>activity_next.xml</h4>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    &lt;TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, User!"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"/>
 
 &lt;/RelativeLayout>
 </code></pre>
         </div>
         <div id="output-container">
             <h3>Output</h3>
+            <h4>activity_main.xml</h4>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204988616242364446/p7_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6bc19&is=65c44719&hm=b695d9d0757439bd081ad78ed9067e38f67141adc332784d8e697abe6d70920c&" alt="Output Image">
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205934675386957844/screenshot2_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65da2d2f&is=65c7b82f&hm=e2fd59b3e8f030a9be51cfcdd0060a3c511a318de358d4570c053403caeba6ec&"
+                    alt="Output Image">
+            </div>
+            <h4>activity_next.xml</h4>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205936078788370473/screenshot1_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65da2e7e&is=65c7b97e&hm=c13479b303a1caba2218e4b557afd2890bc0d403a14fc2762f5eb744d1ba2f6f&"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-1">
+        <h2>Practical 8: Email Validation Login</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.empty3;
+
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText emailEditText, passwordEditText;
+    private Button loginButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        emailEditText = findViewById(R.id.emailEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        loginButton = findViewById(R.id.loginButton);
+
+        emailEditText.addTextChangedListener(textWatcher);
+        passwordEditText.addTextChangedListener(textWatcher);
+    }
+
+    private TextWatcher textWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        }
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            String email = emailEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
+            boolean enableButton = !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password);
+            loginButton.setEnabled(enableButton);
+        }
+        @Override
+        public void afterTextChanged(Editable editable) {
+        }
+    };
+    public void loginUser(View view) {
+    }
+}
+  
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+
+    &lt;EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    &lt;Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        android:enabled="false"
+        android:onClick="loginUser"/>
+&lt;/RelativeLayout>
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205955989367693383/Screenshot_2024-02-11-00-35-32-55.png?ex=65da4109&is=65c7cc09&hm=3f0581ea1a33b2490ed3d062c258d6cbdc16a9b226ef2c0eb87f3504f32a0cc2&" alt="Output Image">
+            </div>
+            <h3><pre>  </pre>   </h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205955989866680390/Screenshot_2024-02-11-00-36-13-74.png?ex=65da4109&is=65c7cc09&hm=7c794b94c97fe6f0f22686422c2611b303f1505fc2f7322b6ed8b21d3e29cd4d&" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="code-container" id="practical-1">
+        <h2>Practical 9: Passing Credentials App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <h4>MainActivity.java</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here
+package com.example.mp9;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText usernameEditText, passwordEditText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginUser();
+            }
+        });
+    }
+
+    private void loginUser() {
+        String username = usernameEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
+
+        if (!username.isEmpty() && !password.isEmpty()) {
+            Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, NextActivity.class);
+            intent.putExtra("USERNAME", username);
+            intent.putExtra("PASSWORD", password);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Please enter both username and password", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+
+            </code></pre>
+
+            <h4>NextActivity.java</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.mp9;
+
+import android.os.Bundle;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class NextActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_next);
+
+        TextView usernameTextView = findViewById(R.id.usernameTextView);
+        TextView passwordTextView = findViewById(R.id.passwordTextView);
+
+        // Get username and password from the intent
+        String username = getIntent().getStringExtra("USERNAME");
+        String password = getIntent().getStringExtra("PASSWORD");
+
+        // Display username and password in TextViews
+        usernameTextView.setText("Username: " + username);
+        passwordTextView.setText("Password: " + password);
+    }
+}
+
+            </code></pre>
+
+
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <h4>activity_main.xml</h4>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+    &lt;!-- Your XML code here --&gt;
+    &lt;?xml version="1.0" encoding="utf-8"?>
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    &lt;EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"/>
+    
+    &lt;EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+    
+    &lt;Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:text="Login"/>
+    
+&lt;/RelativeLayout>
+            </code></pre>
+            <h4>activity_next.xml</h4>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    &lt;TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:textSize="18sp"
+        android:layout_centerInParent="true"/>
+    
+    &lt;TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameTextView"
+        android:layout_marginTop="16dp"
+        android:text="Password: "
+        android:textSize="18sp"
+        android:layout_centerInParent="true"/>
+&lt;/RelativeLayout>
+    </code></pre>
+
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <h4>activity_main.xml</h4>
+            <div id="output-image">
+
+                <!-- Replace the following with your output image -->
+
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205950446879899738/screenshot3_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65da3be0&is=65c7c6e0&hm=8fa63372d56e38b423923ef30b73086f7c74f1b46ddd45d77caf4d207a14a4ae&"
+                    alt="Output Image">
+            </div>
+            <h4>activity_next.xml</h4>
+            <div id="output-image">
+
+                <!-- Replace the following with your output image -->
+
+                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205950448297713674/screenshot4.png?ex=65da3be0&is=65c7c6e0&hm=290a7737b29e9e277946c592f822de44693cf2304b6fe233683c4812bd8e80fb&"
+                    alt="Output Image">
             </div>
         </div>
     </div>
