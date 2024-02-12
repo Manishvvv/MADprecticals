@@ -94,27 +94,24 @@ public class MainActivity extends AppCompatActivity {
             <h3>XML Code</h3>
             <!-- Replace the following with your XML code -->
             <pre><code>&lt;!-- Your XML code here --&gt;
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"&gt;
+    tools:context=".MainActivity">
 
-    &lt;EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter text"/&gt;
-
-    &lt;Button
-        android:id="@+id/submitButton"
+    &lt;TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_marginTop="16dp"
-        android:text="Submit"
-        android:onClick="onSubmitClick"/&gt;
-&lt;/RelativeLayout&gt;
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout>
             </code></pre>
         </div>
         <div id="output-container">
