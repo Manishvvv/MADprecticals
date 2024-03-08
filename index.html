@@ -13,6 +13,15 @@
             color: #333;
         }
 
+        ::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: transparent;
+		}
+
         h1 {
             color: #4285f4;
         }
@@ -63,11 +72,164 @@
             width: 100%;
             height: 100%;
         }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* .con {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .jump {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .jump li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .jump a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #555;
+            transition: background-color 0.3s ease;
+        }
+
+        .jump a:hover {
+            background-color: #777;
+        }*/
+
+        .landing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #4285f4;
+        }
+
+        .landing-container img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Styles for PC */
+        @media (min-width: 768px) {
+            .landing-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                align-items: center;
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 2em;
+                text-align: left;
+            }
+        }
+
+        /* Styles for mobile */
+        @media (max-width: 767px) {
+            .landing-container img {
+                margin-top: 10px;
+            }
+        }
+
+        .con {
+            max-width: 800px;
+            /* Adjust the width as needed */
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the navigation list */
+        .jump {
+            list-style: none;
+            padding: 0;
+        }
+
+        .jump li {
+            margin-bottom: 10px;
+        }
+
+        /* Style for the links */
+        .jump a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .jump a:hover {
+            color: #e74c3c;
+        }
+
+        /* Media Query for mobile responsiveness */
+        @media (max-width: 600px) {
+            .con {
+                padding: 15px;
+            }
+
+            .jump li {
+                margin-bottom: 8px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <h1>Android Studio Practicals</h1>
+
+
+
+    <div class="landing-container">
+        <h1>Android Studio Practicals</h1>
+        <img src="https://previews.dropbox.com/p/thumb/ACOMi3lK8-ZHsPY6D1kTr66d6juiWbltpbllrlTf0GU4anZGKhAbjfoG-lEAbZvCUaA5nGNVUlEIQq_b8LnWMJuQ2KR9DaaIUD1_bjJp63DkZ0LzWqKZQNUtE1h5Wzb77QZWNOaFtRwAHeT5VTV8coluSzh1yp1qrYYpGBhQfvzD5KgeKaG5VkrYQe_GsPzAG1Uzn_mNLpQE0RmF8AXmsauQFZ_P31aNjT_g45w3UHLhzNxsLiRE-zXncxN317qDCiH3uCFj7mUv_7yXip4Nef2i5yfHzrrPq8ScXC8JY0XThdLNjJBun2x7rW207qm9QbRAfZ_BXWvj2snL1bL121r0/p.png" alt="Your Image">
+        <!-- Add any additional content or text here -->
+    </div>
+
+    <div class="con">
+        <ul class="jump">
+            <li><a href="#practical-1">practical-1</a></li>
+            <li><a href="#practical-2">practical-2</a></li>
+            <li><a href="#practical-3">practical-3</a></li>
+            <li><a href="#practical-4">practical-4</a></li>
+            <li><a href="#practical-5">practical-5</a></li>
+            <li><a href="#practical-6">practical-6</a></li>
+            <li><a href="#practical-7">practical-7</a></li>
+            <li><a href="#practical-8">practical-8</a></li>
+            <li><a href="#practical-9">practical-9</a></li>
+            <li><a href="#practical-10">practical-10</a></li>
+            <li><a href="#practical-11">practical-11</a></li>
+            <li><a href="#practical-12">practical-12</a></li>
+            <li><a href="#practical-13">practical-13</a></li>
+            <li><a href="#practical-14">practical-14</a></li>
+            <li><a href="#practical-15">practical-15</a></li>
+        </ul>
+    </div>
+
 
     <!-- Practical 1 -->
     <div class="code-container" id="practical-1">
@@ -119,14 +281,14 @@ public class MainActivity extends AppCompatActivity {
             <div id="output-image">
                 <!-- Replace the following with your output image -->
 
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204856971652636672/p1-output_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6417f&is=65c3cc7f&hm=e95e9b6c5391b0aacad57418b1506bb4e98b03c2175d1e76cb3c3c14f67329e1&"
+                <img src="https://previews.dropbox.com/p/thumb/ACNuvhrkOt0XJAcZgDvEkWR_EgWIL19OyRsuhhoj3fVuATvrlIXJ4mRChp-FxpIzrjGWW-cQG3LRo5K2Pk2thELpdbQFTvimzy27t931U6EJhDqzua57K5Oo62NsHeoF4br6HzTjUN-9NR-GgBF50_qaxDMu6RXMHd98qifaHZFdbmc9ai0Mo1mvkS6JXmLhoZeEoZ_J_ljFAAJsju7TxicTNZdJU4sM7ngG56eJ4JKxw1fS1FZXA3Xvzlv92w2V2v2aIiLRDM3c3rViE1tNYVubbPTm5xkN2Shq4K_OML0ZVi_ClLkXfDOXnxhg-tOORX62BkOI2XmF2eFOwAxRtfNL/p.png"
                     alt="Output Image">
             </div>
         </div>
     </div>
 
     <!-- Practical 1 -->
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-2">
         <h2>Practical 2: MyInfo App</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -254,14 +416,15 @@ public class MainActivity extends AppCompatActivity {
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204866292675252224/p2_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d64a2d&is=65c3d52d&hm=1d85611a6cfe7968abef5f3070c6dfeb0e3af84e78a0ab598a43388b4193ee48&"
+                <img src="https://previews.dropbox.com/p/thumb/ACPACl8r_VZmC8OXA77ZxXHw0DpLrYnXh9JXn2EAp-TbhnMmWra_gIffrQdfBw-rEmPYP3wpvJ0KuSRRJUE_lDH3SkydLqSQhpFuN-QUStMQ-zn3pGVQWGPZWNk5sPbc68SeF96jh4Qsodhf_jGL5D0FTldOwqPPp6Yj_RPbgCR0fptxZ2lqS7XcH83s8_6JOtuN6sc_7ZdFBMBD12PeGyX5WvPUPwTCs7QYNksmk1478S6emH-4L4EixxMyz7w1GU9EhjT8BkKzPF-yn89cPHps8JZaqwRj9onzReG_Nr-tH06rf_YD4BsF4upRNI21KclC0MF0gdibR-UNrXENbjI3/p.png
+                "
                     alt="Output Image">
             </div>
         </div>
     </div>
 
     <!-- Practical 1 -->
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-3">
         <h2>Practical 3: Android Activity Lifecycle</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -335,14 +498,14 @@ Don't needed
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205203400107630673/p3.0110_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d78422&is=65c50f22&hm=67b0716cbddde6991d7e513f5e0af719032e222f6e2f3cee2055dbc0128244a3&"
+                <img src="https://previews.dropbox.com/p/thumb/ACMkz8_RhJobpnQx8-uu3WJuT6zXzEHbUP6HWvk2R1O1BlyOWQIpUBxBeuNmAeMFZ7VfGHZ4BhcHuH9xYEn1g3YOSzaHY1JeJfgMob3SRZ6fN4LAfHwSdctrKhjDAp_xM8Nt9XEyG0jGulqeb9bjNJ3k-QWFL-jh5RXiqE6Qj-rqp2WSWjlZxmfTnzJz4SmRHgq0KxbMDspDHjmWHziNFT2cpuZ5w_N1CQDCNrK-QWv87N3p2e5n6GeIsI45KtA-dt2Et7oh3udg6CnK340mg2UK1m0oJcDu40O6uN3MrnJJ09nJhFDLuKuaN-2RNELIXCVkw9zC1EwEMSxSkSLzEvANv4FzVn-mkzrYcoLoHsdGcA/p.png"
                     alt="Don't needed">
             </div>
         </div>
     </div>
 
     <!-- Practical 1 -->
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-4">
         <h2>Practical 4: Text Entry and Toast App</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -406,14 +569,14 @@ public class MainActivity extends AppCompatActivity {
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204863148948197446/Screenshot_2024-02-08-00-08-28-57_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6473f&is=65c3d23f&hm=6d4f887093fb57a136fc4fc92496aeb1101918db833c55f21430c9e16e029221&"
+                <img src="https://previews.dropbox.com/p/thumb/ACO_Ba4DUIQSrv8s4ZQFBI71GUOa3wH0tRLpyCzmmY6qUKRoBkTEIqfjhd9OiYQsmWhWDTA0gej2lD5eztN578qG1vLsAaxe8R1SSysAVGKryAsn-1xNsoHkvwNydfRyJ8QRGbEZ9xUHN1e-A8m_00RGqziEogl85kxKMLneWwaRSPb4pe8u7QMZ2R01aC_fOfr3nPXAkN-vnWXpjR_6qEl_j1ZlWUNolqOLhSZsVS6Wwtt3NyjK_S4yQvQ7LavQCFbJkzX6MydaCBuRV3xSVnIpCw2MQ_OZmNPNZ977OVfHjMzjdiCSnc-JfJkS6RqiQgV-gxEDg308isz2z0eJfYbe/p.png"
                     alt="Output Image">
             </div>
         </div>
     </div>
 
     <!-- Practical 1 -->
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-5">
         <h2>Practical 5: Arithmetic Operations App</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -573,14 +736,14 @@ public class MainActivity extends AppCompatActivity {
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204979846262947851/pf_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6b3ee&is=65c43eee&hm=0378a099e164cc5ac5eef760989aa6a8b249359dc013b2d76e9c600af9d67002&"
+                <img src="https://previews.dropbox.com/p/thumb/ACPtFgIDC20ir45xHJAUBQ1l7KseMtetGxg3EsCNcceZyDLBdqDlpuqwAwNfSmL6YrGnma1IcEzg6_X24U5UcoLfCcG7KbvfyqS1Ux12HqS4cn6qyRUmVzZ7Tz_-J7SCRp5FV5s7nVLuGtyzglKusCljtiGUr4i-gDY785BfSFwLVJ7iYBksOaoWkO1FBf_wBkbcMLLb3ZxIDWPMqd-q4uXNDW5xBsdY9rhuITHwC68bkSyld0sLmcGTZS5Yq5oCqOREY6ozaFX4vg-33cyhVn2Z-OtwwTtJq9r7kZC-ooYhpdzU7ezyCKWVXYMXZzWVwIKgBY5F7qBSbjb5JmlCNKVUECpQrpyBtcUJEMaDfHPq_Q/p.png"
                     alt="Output Image">
             </div>
         </div>
     </div>
 
     <!-- Practical 1 -->
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-6">
         <h2>Practical 6: AutoCompleteText Demo</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -653,14 +816,14 @@ public class MainActivity extends AppCompatActivity {
             <h3>Output</h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1204992993476743199/screenshot_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65d6c02d&is=65c44b2d&hm=08a6d003ff1e7899b2598c7d7d109c2e39b4d095689ccda6d2c4ab72ca2fe3ef&"
+                <img src="https://previews.dropbox.com/p/thumb/ACNpws-dK-Fp2FYlQtS391iYzugtUodVWMc_aNLjxNvUiDWLpv8Mv4EB3kKK42jOsxJloMFRdyKf3kL2hHzlCagCHkeso0eXELTqReRNvw2q9pBpNQ25gRNkiNud4JROuWeGI7GW1eMR_W2Cnmngn91EbTgtJTMdsdqKxniFprtX6aFbckFD9ldIsAKYrEXLRV08vF11gtozUwgLCoaASG23Wx0RNRh8TrQSRzNvL93CBS1U2xO2JfhKNu7j9pxZiusvC52t5w1-hStNfmxj2r93uvfoxVRynALh1YfhQVQ2AmOzHnw5JFxYHA_29m9VbmkJSDJBIFipkmCvQ1NFsAb2/p.png"
                     alt="Output Image">
             </div>
         </div>
     </div>
 
     <!-- Practical 1 -->
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-7">
         <h2>Practical 7: Login Module Application</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -812,19 +975,19 @@ public class NextActivity extends AppCompatActivity {
             <h4>activity_main.xml</h4>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205934675386957844/screenshot2_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65da2d2f&is=65c7b82f&hm=e2fd59b3e8f030a9be51cfcdd0060a3c511a318de358d4570c053403caeba6ec&"
+                <img src="https://previews.dropbox.com/p/thumb/ACN6CjQEsHmIkb52SgjoeRHVMmHl44KwXmBs98XFU8PBR_VoRwTfAaDko2ewApGgoA2gRDcicCj7EqWI-HD0gYH39HLeBbfy1sxAhTUOi3Y6ciGkjYMX-3pFAa8qvZP60WDMlTY-tEfFcwLxlqxvOpyYQc6Yw1BSyo-81C_zzr8-rIeWoqlogdJwcE0GFmWDP0XtAf4Vv7L6N4XA3FYscy4VyDChO-ulWWDvqCHwteB4A6tKJIOiPzFejeStmTVCGCX54CRpvis2ngVZEfcfHLvfEXyTsUHjnieKMHylMW4aF6YO9wgLbdKHZfJeaZT4Kd4G4gCR_J-Bln3341L4bdHh/p.png"
                     alt="Output Image">
             </div>
             <h4>activity_next.xml</h4>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205936078788370473/screenshot1_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65da2e7e&is=65c7b97e&hm=c13479b303a1caba2218e4b557afd2890bc0d403a14fc2762f5eb744d1ba2f6f&"
+                <img src="https://previews.dropbox.com/p/thumb/ACMtDVfJ0tk_uJgP1a6ULsrMKDv-YW162sUk12OYwLtV4eWJie8Io5mDdJ2-E4yjnKE11Ec14l-64Hlt1-aVL9-ZDisCFevRfmkrV_4AryUod7Rw2hHYIGt7w9Qk1mKKt5fEs_8s_7qSj3IsOtIThZQFgG1O7RvOeqGGr-fu0K40pIWfweKzzdQAXafXsBZ-Hqi5pI4a-yVhLpAUpdmFViu3rsXUHAzaMrfhK0q0eQFcsvX6cifGUwUEmRKdbABhzFi85kXue328cFJA9hDARirS0n1oRBMH34VJLk0TQVH5HJC5lOB0WowUvHLu9Snl9QBNZP4zJjwlQkggjM8uzWZM/p.png"
                     alt="Output Image">
             </div>
         </div>
     </div>
 
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-8">
         <h2>Practical 8: Email Validation Login</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -925,19 +1088,23 @@ public class MainActivity extends AppCompatActivity {
             <div id="output-image">
                 <!-- Replace the following with your output image -->
 
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205955989367693383/Screenshot_2024-02-11-00-35-32-55.png?ex=65da4109&is=65c7cc09&hm=3f0581ea1a33b2490ed3d062c258d6cbdc16a9b226ef2c0eb87f3504f32a0cc2&" alt="Output Image">
+                <img src="https://previews.dropbox.com/p/thumb/ACO-F50mMqXpobPHpmbJxw_S3WjcMEKvUTpqTpKm6K-qpcmErxMjvn1k18xbt-FlUUAUvtZ87htOoeiJ25m_Jm0xI0B74aV5mjAB1mvcCf6OSyTt9_PT8mOjWuIrCScBSr3oUdrOFWDverVHEiqi0LaWWHA4Cmi0awgaYLFZBWRxV2UAI7ZzvOe2c_9MZPsJarx111afeRdfyA_5ZSC0HfwbRjuaz5oZBUw5XkPkQ81yVnfthhaNcDaN-NSUqV_lo2Krye8A6oU6itw8FxBb9LRQN33IjluJAaxTA4LcHeAGiISQ3YVSwpFQFgYngI9MTj6DKzXQvpYWxSKucSAG2gZP/p.png"
+                    alt="Output Image">
             </div>
-            <h3><pre>  </pre>   </h3>
+            <h3>
+                <pre>  </pre>
+            </h3>
             <div id="output-image">
                 <!-- Replace the following with your output image -->
 
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205955989866680390/Screenshot_2024-02-11-00-36-13-74.png?ex=65da4109&is=65c7cc09&hm=7c794b94c97fe6f0f22686422c2611b303f1505fc2f7322b6ed8b21d3e29cd4d&" alt="Output Image">
+                <img src="https://previews.dropbox.com/p/thumb/ACPWnFP1CgMm8uPJktnkfRzAbM4s3TESRWbuLP6L3wkHvzupAU51ih9BP8eq4wxycrZoVRt0hA8XFK6aJCgw9z71rrNJU9WkZZPVQDETb8Ro22n1eBzOHTnJGfD2zkFmw82fB14kO5WbFFYcVSnS9uCDGjCuqaJi6WpkGSTwRhjZC0YMmy66_ZoQCnCExKKRomC1NcgjaQLdT1_eS_r4mDYXq1Bwu9jZsBqia1UFcfkLBVoRgEu70g1bsFylai7sOYd2tfe0ugEFkKQ9jPQPbRUJIwU6Fi--tSWI7s6uZ62UcWd3Jnf4Gs9lJ6V6mTy4c3PB22RFwdyNaiZ7zKyux7uy/p.png"
+                    alt="Output Image">
             </div>
         </div>
     </div>
 
 
-    <div class="code-container" id="practical-1">
+    <div class="code-container" id="practical-9">
         <h2>Practical 9: Passing Credentials App</h2>
         <div class="code-container" id="java-code">
             <h3>Java Code</h3>
@@ -1104,7 +1271,7 @@ public class NextActivity extends AppCompatActivity {
 
                 <!-- Replace the following with your output image -->
 
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205950446879899738/screenshot3_upscayl_4x_RealESRGAN_General_x4_v3.png?ex=65da3be0&is=65c7c6e0&hm=8fa63372d56e38b423923ef30b73086f7c74f1b46ddd45d77caf4d207a14a4ae&"
+                <img src="https://previews.dropbox.com/p/thumb/ACOl-meekMt48hFNkA2xc-mRpkmIemSvRmpuR-yCddmlDgJvOMZsxzhTF2E6Or1wlSd16pJjoiZFtwOImtfX2kijIIu9BUk8G4ybXZQZTSD8U3cjLwiQ_AyBSp_y-qsF6LOloK4Bm5dtCAP6LZ5WmXf6ZScTdDhc82MMt9gmd2sG_i3NXYiq2MZWRHclZuhaLxEVp-3fFfzJnJ333_0oFflvE-FtuLZG2omLZB5cvcisxW3K_HYZ-CVCILYs2lsRP2Vp1Zu7x9Rs6mm7EBwPmKj_0Kk2YzVXlWJRzA3Kkp0FcarrnIWO9KHMrVRSnIT8OhN1wkfQYeZF1A2GVd45KLnC/p.png"
                     alt="Output Image">
             </div>
             <h4>activity_next.xml</h4>
@@ -1112,14 +1279,535 @@ public class NextActivity extends AppCompatActivity {
 
                 <!-- Replace the following with your output image -->
 
-                <img src="https://cdn.discordapp.com/attachments/1082367701105782868/1205950448297713674/screenshot4.png?ex=65da3be0&is=65c7c6e0&hm=290a7737b29e9e277946c592f822de44693cf2304b6fe233683c4812bd8e80fb&"
+                <img src="https://previews.dropbox.com/p/thumb/ACOP40wElw0FuIE12lPB1E35FhBYzai6lsIvzezIbIcKnT3_c7Y97Fhxo6Xk-2ibR_3fe7SUsw0wAxCnNanCylqYSYIe97OmyBYX74xEvmHMqzER3Ff1mEf8q4QR52kZIBcy1EcqMPYNw1NvGcQ6TMllSJW3faqqnJygWj2xb8IyTt8O0Tn4Qv9FtFgf2p6NSK2Pb8hHGhz1uhI1EMqOXkLDHlBRBLl4AOWlqe7lViSArmep4tsUU0FFAqcMY0zckG5aDlwhRnFPSTLLKNYxTDYKPY-cDeiz6gr30uRw2FdMMBJQ7wwMJ4e7yiM3gR1T0KH93oQy135SRSiAu5tZGX3P/p.png"
                     alt="Output Image">
+            </div>
+        </div>
+    </div>
+    <div class="code-container" id="practical-10">
+        <h2>Practical 10: ListView Demo</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+//Don't needed
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" /&gt;
+
+&lt;/RelativeLayout&gt;
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://previews.dropbox.com/p/thumb/ACPxUNZnCly-kQFB88srN71jv4OBfJDv0rg7N_EumB84l8yr4BzjJ-fT5f1zPiqVKvp2SBos-nxgqwsgEcmnJKgkQzH17Vwzi76p843emjX98ZLU-YbxLGYqX8wUM21oOq9eMe17JjsTanDghXLMo9XEPn3P8xlCDaI5aIwiiJTyWXfdVGaaTmIIPogj-z1ioiOH128yMW_akybVrOuDZpO8TimryZgjx9qCZmiDMQZjsenNP3Fd6HgQnVbtzFKWuFBKMW8lMVlEyusIr-97OY_prrONbQlGcitXeFBdXAHdZSdVka2Zbp5Hv8TJtg2sbidcSWAlWuryKIOvPjCd_xQj/p.png" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-11">
+        <h2>Practical 11: RadioButton Toast App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp11;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+   
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+
+   
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                
+                RadioButton radioButton = findViewById(checkedId);
+
+             
+                if (radioButton != null) {
+                    String selectedText = radioButton.getText().toString();
+                    Toast.makeText(MainActivity.this, "Selected: " + selectedText, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"&gt;
+
+        &lt;RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"&gt;
+
+            &lt;RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 1" /&gt;
+
+            &lt;RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 2" /&gt;
+
+            &lt;RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 3" /&gt;
+        &lt;/RadioGroup&gt;
+
+    &lt;/RelativeLayout&gt;
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://previews.dropbox.com/p/thumb/ACOLoc0GenTjvZGSiQFgc2c1wB6ohY7NGVINS87KVzva3g9VMwigxZNxINYH4GCgjZ9r67rDIftlUO47pmepPCV-Fq64u5HgdhfBbP1Gb-LXbShP3bK6E-_Hx-gZR1KRFbPco9Hivi5siWgqBmk6SRVdXoX4_Oc6pR18N7VUrMWY_3v5jM41MbHcgzq4AjtjsRST_MO70ALIVt1Jdbfj8CdOyXvvCaG6se5LlyIIcOODyEIAf1EydsSoZPspFIsVR_RDOXJKUFpnhIH7Cs__2Fv7F4eTsX7faUaaiETnW3qi3FPt0SccN5XFGL8Dr59DZhzy5JWpHv6q8z1uKC-TJhi-/p.png" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-12">
+        <h2>Practical 12: CheckBox Toast App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp12;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        CheckBox checkBox1 = findViewById(R.id.checkBox1);
+        CheckBox checkBox2 = findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = findViewById(R.id.checkBox3);
+        
+        Button showButton = findViewById(R.id.showButton);
+        
+        showButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuilder checkedCheckboxes = new StringBuilder();
+                
+                if (checkBox1.isChecked()) {
+                    checkedCheckboxes.append("Checkbox 1\n");
+                }
+                if (checkBox2.isChecked()) {
+                    checkedCheckboxes.append("Checkbox 2\n");
+                }
+                if (checkBox3.isChecked()) {
+                    checkedCheckboxes.append("Checkbox 3\n");
+                }
+                
+                if (checkedCheckboxes.length() > 0) {
+                    Toast.makeText(MainActivity.this, "Checked Checkboxes:\n" + checkedCheckboxes.toString(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "No checkboxes checked", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox 1"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+    &lt;CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox 2"
+        android:layout_below="@id/checkBox1"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+    &lt;CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox 3"
+        android:layout_below="@id/checkBox2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+    &lt;Button
+        android:id="@+id/showButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Checked Checkboxes"
+        android:layout_below="@id/checkBox3"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+&lt;/RelativeLayout&gt;
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://previews.dropbox.com/p/thumb/ACOPqiRowdKwqAoinX7yQZnRGlUhBsC46qZs6v7gNZ0B-W0hhB0I6QZyZHDqVeW7XyzDhcw3h3ZwE1dNIwnE_98_-pBcqO87E922KnD80uNlfd-qCzrn75sudQVMcIG0cA23x3cLm8i4O4npso50yiJQNRKymmaTYElUnwLbF-4QBQyE0bF3E5CUGQByvh_JhAszCEVBIb0SdUTbJ6FTr8mavpOuYV9TOGY3tpBgU1tUSYckl5fHLzfL-wXJePmXZJQ8nq7jh7yG-2piVlOARSP004w2f17H_eRcEy_H0Yv11lDbQ7PaJNScDQzl4CoU7o0004d6M-1btk9gt-2OykF5/p.png" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-13">
+        <h2>Practical 13: CheckBox Toast App (Dynamic)</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp13;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        CheckBox checkBox1 = findViewById(R.id.checkBox1);
+        CheckBox checkBox2 = findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = findViewById(R.id.checkBox3);
+
+        checkBox1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCheckedCheckboxes();
+            }
+        });
+
+        checkBox2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCheckedCheckboxes();
+            }
+        });
+
+        checkBox3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCheckedCheckboxes();
+            }
+        });
+    }
+
+    private void showCheckedCheckboxes() {
+        StringBuilder checkedCheckboxes = new StringBuilder();
+
+        CheckBox checkBox1 = findViewById(R.id.checkBox1);
+        CheckBox checkBox2 = findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = findViewById(R.id.checkBox3);
+
+        if (checkBox1.isChecked()) {
+            checkedCheckboxes.append("Checkbox 1\n");
+        }
+        if (checkBox2.isChecked()) {
+            checkedCheckboxes.append("Checkbox 2\n");
+        }
+        if (checkBox3.isChecked()) {
+            checkedCheckboxes.append("Checkbox 3\n");
+        }
+
+        if (checkedCheckboxes.length() > 0) {
+            Toast.makeText(MainActivity.this, "Checked Checkboxes:\n" + checkedCheckboxes.toString(), Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(MainActivity.this, "No checkboxes checked", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"&gt;
+
+        &lt;CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkbox 1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/&gt;
+
+        &lt;CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkbox 2"
+            android:layout_below="@id/checkBox1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/&gt;
+
+        &lt;CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkbox 3"
+            android:layout_below="@id/checkBox2"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/&gt;
+
+    &lt;/RelativeLayout&gt;
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://previews.dropbox.com/p/thumb/ACNtee24ZE2OYcyyfwZyphAbwduHzVXr3tDi1SYxvh_SlVkaVkd1D6iL9LYfh6WYJztGXKcgGeB6-IOBfzxODjIHAWmrGYpDjaDblCEOzTorYoTEyCy94PBcPt0j4F7lo5NdEZalp35vJcI0KxhjcFz5XI2pKbX7JwoSqU7P73noEnYP2adTcQOdjenSGVu9kIMB_WeciI5vci-te6br_FRTbzoa91x99LapPf2nP204J50IMrMlcIZafc-miH7ABtvTLaJXbwvm-vpMeLNEU_I04UvK7R7mS5o0tWUkktpWijFnV1eLznAUdFvyS-Ay3sGZG6DMgtP8QVYg3zZop59t/p.png" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-14">
+        <h2>Practical 14: WebView Demo</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.p14webview;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private WebView webView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        webView = findViewById(R.id.webview);
+        webView.loadUrl("https://www.google.com");
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        webView.getSettings().setJavaScriptEnabled(true);
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+ &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"&gt;
+
+        &lt;WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" /&gt;
+
+    &lt;/RelativeLayout&gt;
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://previews.dropbox.com/p/thumb/ACMFd1eMzs96sTrCz1KTEeU_0hM9s_KR6EnS3AV3wOZcdUGvuQpQBb6qzTGv0UaFxYHIK39OwP6R2TCWIHnyXQ7W0vRwfGKI8Ufl76v5qAj7vBta9gHF0G47tVi1WTC4NZ7GfJlpXz-qAXgSBfGFut2U_lXNf2GLPx1YD-p8izbaEFUycWHf8QLEYDutByZ4lSqVIhFgucOKEvGNn2gITeOtptuuMrgjVOf53PqTRz6EAE9VMaM1MeAeLNGtrqMNKpe0vzwI-oYMDKP1trcBEg1hXzv6hKacbehQHhmGXC2OOUSWh7GNe3hMb-1DliuG0dyZ0fTJtrp16-_mC3_omkQs/p.png" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-15">
+        <h2>Practical 15: SeekBar App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.p15seekbar;
+
+import android.os.Bundle;
+import android.widget.SeekBar;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        SeekBar seekBar = findViewById(R.id.seekBar);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                Toast.makeText(MainActivity.this, "Progress: " + progress, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+ &lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" /&gt;
+
+&lt;/RelativeLayout&gt;
+
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="https://previews.dropbox.com/p/thumb/ACP83Y3jZlIzapqqUXC_S2XoUNdvmHBubXJ5g8v7MnTz1qk3QrVcRHDQv5Gr21q4yHgZGmYMFpT2FhkLzu4uWiePNhJ_QXY8OpKhHWakWeJ-7hqHLgAsL3zGngK4C1BAVrh_DnH2FzW3XsbX3xXzC896OKmnxtm6kEf8NfNRVZpmFjCjW7-tuTimTrdmY8eWHT01pnPbKuKyZAQXdJPSWJXwDuqbYLtgJAC9mZfpvkc6KAQhKEVyMqa3az3Fy0cOI-ubbUvfmL_XFXkuy3GYianPO_XLc_8kJEqepTgWrCseRTC9fLUS6vFUVCjdXrgm0YQBMGiQgTTcwZsXLIf0WSn3/p.png" alt="Output Image">
             </div>
         </div>
     </div>
 
     <!-- Repeat the above structure for the remaining practicals (2 to 7) -->
-
+    <div class="footer">
+        <p>This page is for educational purposes only.</p>
+    </div>
     <script>
         // You can add any JavaScript code here if needed
     </script>
